@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CDCompetitionViewController">
+            <connections>
+                <outlet property="mainTableView" destination="QFN-9d-hbU" id="Tbf-a2-le7"/>
+                <outlet property="searchBar" destination="1CK-Rz-4bC" id="84S-Gz-Ey2"/>
+                <outlet property="searchDisplayController" destination="2Dp-x7-gMz" id="kKO-7o-k8G"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QFN-9d-hbU">
+                    <rect key="frame" x="0.0" y="44" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jIp-WI-KvP"/>
+                        <outlet property="delegate" destination="1" id="8PZ-Zt-BqD"/>
+                    </connections>
+                </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CK-Rz-4bC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Jgl-Hh-3FC"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <searchDisplayController id="2Dp-x7-gMz">
+            <connections>
+                <outlet property="delegate" destination="-1" id="rHf-2C-8DN"/>
+                <outlet property="searchBar" destination="1CK-Rz-4bC" id="s9Q-M0-pUs"/>
+                <outlet property="searchContentsController" destination="-1" id="nHo-Ft-hvh"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="vHY-PG-Fu2"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="2zg-1X-KuV"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>
